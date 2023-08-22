@@ -20,7 +20,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+//import io.opentelemetry.exporter.logging.SystemOutLogExporter;
 
 public class setpdef {
 	
@@ -34,7 +34,8 @@ public class setpdef {
 		//initiating the chrome driver
 		System.setProperty("webdriver.chrome.driver","./BrowserUtils/chromedriver.exe");	
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--remote-allow-origins=*");
+		//chromeOptions.addArguments("--remote-allow-origins=*");
+		chromeOptions.setBinary("E:\\cdriver(chrome)\\chrome-win64\\chrome.exe");
 		driver = new ChromeDriver(chromeOptions);
 		System.out.println("before method");
 	}
